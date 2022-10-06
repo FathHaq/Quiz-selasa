@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Warewolf World</title>
+</head>
+<body>
+
+
+	<main class="py-12 px-4 bg-slate-200 w-screen h-screen pt-4 flex justify-center items-center flex-col">
+			<form class="flex flex-col" name="myForm" onsubmit="return validateForm(); " method="post" action="">
+				<label for="userName" class="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2">User Name</label>
+				<input id="userName" name="uname" autocomplete="on" class="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-[17em] h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow" placeholder="Masukan namamu" />
+
+				<div class="dropdown-one w-[15em] rounded outline-none bg-white relative mt-4 shadow-md">
+
+					<div onclick=" event.stopPropagation(); showDropDownMenu_dropdown_3(this);" class="dropbtn-one relative py-[12px] flex items-center justify-between w-full shadow-sm">
+						<span class="px-5 text-gray-600 text-sm font-bold flex items-center justify-between w-full" id="drop-down-content-setter_dropdown_3">
+							Pilih Rolemu
+						</span>
+					</div>
+
+					<div class="hidden rounded w-full py-2 top-16 right-0 bg-white shadow-lg absolute" id="drop-down-div_dropdown_3">
+
+						<div onclick="event.stopPropagation();text_dropdown_3(this)" class="flex items-center justify-between hover:bg-gray-100 rounded text-gray-600 hover:text-gray-800 p-3 hover:font-bold hover:cursor-default">
+							<a href="javascript:void(0)" class="cursor-default"><p class="text-sm leading-none">Warewolf</p></a>
+							<img src="/Assets/warewolf.png" alt="warewolf">
+						</div>
+
+						<div onclick="event.stopPropagation();text_dropdown_3(this)" class="flex items-center justify-between hover:bg-gray-100 rounded text-gray-600 hover:text-gray-800 p-3 hover:font-bold">
+							<a href="javascript:void(0)" class="cursor-default"><p class="text-sm leading-none">Witch</p></a>
+							<img src="/Assets/witch.png" alt="witch.png">
+						</div>
+
+						<div onclick="event.stopPropagation();text_dropdown_3(this)" class="flex items-center justify-between hover:bg-gray-100 rounded text-gray-600 hover:text-gray-800 p-3 hover:font-bold">
+							<a href="javascript:void(0)" class="cursor-default"> <p class="text-sm leading-none">Guard</p></a>
+							<img src="/Assets/guard.png" alt="guard.png">
+						</div>
+						
+					</div>
+				</div>
+
+				<input type="submit" id="submit"  class="mt-10 py-2 px-5 bg-cyan-700 rounded-xl font-bold hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-white" value="Submit"/>
+
+			</form>
+	</main>
+
+
+
+	<script src="/script.js"></script>
+</body>
+</html>
